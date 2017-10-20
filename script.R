@@ -1,5 +1,3 @@
-setwd("E:\\Nimesh.Chaturedi\\Desktop\\Nimesh\\R Tutorial edx\\Clustering\\Lancome-City")
-
 # Read in the dataset  data 19th Sep 2017 - 18 Oct 2017
 GaData = read.csv("data.csv")
 
@@ -7,13 +5,6 @@ GaData = read.csv("data.csv")
 summary(GaData)
 str(GaData)
 
-TaiwanCityClust = hclust(dist(GaData[-1]))
-
-plot(TaiwanCityClust, labels = GaData$City)
-
-rect.hclust(TaiwanCityClust,4)
-
-#################################################################################################
 # Compute distances
 distances = dist(GaData, method = "euclidean")
 
